@@ -1,3 +1,20 @@
 name: '${name}'
 version: '${version}'
 main: '${main}'
+authors: [ Drak ]
+depend:
+  - BukkitOfUtils
+folia-supported: true
+
+commands:
+  exchange:
+    description: 'Exchange your points for commands.'
+    permission: 'pointsexchange.commands.exchange'
+    aliases:
+      - ex
+  reloadexchange:
+    description: 'Reload the config file.'
+    permission: 'pointsexchange.commands.reloadexchange'
+    aliases:
+      - rlex
+      - rlexchange

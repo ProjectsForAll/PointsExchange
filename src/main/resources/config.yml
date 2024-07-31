@@ -1,0 +1,10 @@
+exchanges:
+  test:
+    placeholder: "%points_test%"
+    cost: 2.5
+    on-success:
+      - "!c cmi money give %player_name% 100"
+      - "!c lp user %player_uuid% permission settemp test.permission true 1d"
+      - "!c points remove %player_name% test 2.5"
+    on-failure:
+      - "!c cmi ctellraw %player_name% <T>&cYou do not have enough &7'&ftest&7' &cpoints to do that!</T>"
