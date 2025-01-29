@@ -54,7 +54,7 @@ public class Exchange implements Identifiable {
             trueCommand = trueCommand.substring(1);
         }
 
-        trueCommand = understandCommand(trueCommand, player);
+        trueCommand = understandCommand(trueCommand, player, getCost());
 
         if (asConsole) {
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), trueCommand);
@@ -67,7 +67,7 @@ public class Exchange implements Identifiable {
         }
     }
 
-    public static String understandCommand(String command, OfflinePlayer player) {
+    public static String understandCommand(String command, OfflinePlayer player, double cost) {
         if (player == null) return command;
 
         String name = player.getName();
@@ -75,6 +75,8 @@ public class Exchange implements Identifiable {
 
         return command
                 .replace("%player_name%", name)
-                .replace("%player_uuid%", player.getUniqueId().toString());
+                .replace("%player_uuid%", player.getUniqueId().toString())
+                .replace("%price%", String.valueOf(cost))
+                ;
     }
 }
