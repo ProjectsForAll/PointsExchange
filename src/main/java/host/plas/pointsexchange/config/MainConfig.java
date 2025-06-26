@@ -1,8 +1,8 @@
 package host.plas.pointsexchange.config;
 
+import gg.drak.thebase.storage.resources.flat.simple.SimpleConfiguration;
 import host.plas.pointsexchange.PointsExchange;
 import host.plas.pointsexchange.data.Exchange;
-import tv.quaint.storage.resources.flat.simple.SimpleConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;

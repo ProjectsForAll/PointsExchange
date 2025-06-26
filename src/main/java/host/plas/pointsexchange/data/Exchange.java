@@ -1,11 +1,11 @@
 package host.plas.pointsexchange.data;
 
+import gg.drak.thebase.objects.Identifiable;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
-import tv.quaint.objects.Identifiable;
 
 import java.util.List;
 
